@@ -10,29 +10,15 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            // 1 Найти минимальный элемент  и его индекс одномерного массива 
-            int[] array = { 8, -1, 4, 16, -5, 3 };
-            int max = array[0];
-            int indexMax = 0;
-            int min = array[0];
-            int indexMin = 0;
-
-
-            for (int i=1; i< array.Length; i++)
+            // Задание : Дан курс рубля за каждый день в феврале месяце (Случайным образом) 
+            // Расчитать средний курс рубля , максимальный курс рубля и день с максимальным курсом,минимальный курс рубля и день с минимальным курсом
+            double [] array = new double[28];
+                Random random = new Random();
+            for ( int i = 0; i < array.Length; i++)
             {
-                if ( array [i] > max)
-                {
-                   max = array[i];
-                    indexMax = 1;
-                }
-                if (array[i] < min)
-                {
-                    min = array[i];
-                    indexMin = i;
-                } 
+                array[i] = 55 + 10* random.NextDouble();
+                Console.WriteLine($"array[{i}]={array[i]:f2}");
             }
-            Console.WriteLine($"max = {max}\t indexMax ={indexMax}");
-            Console.WriteLine($"min = {min}\t indexMin ={indexMin}");
             Console.Read();
         }
     }
