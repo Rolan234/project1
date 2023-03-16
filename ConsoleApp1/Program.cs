@@ -32,7 +32,7 @@ namespace ConsoleApp1
                 } 
             }
             Console.WriteLine($"max = {max}\t indexMax ={indexMax}");
-            Console.WriteLine($"min = {min}");
+            Console.WriteLine($"min = {min}\t indexMin ={indexMin}");
             Console.Read();
         }
     }
